@@ -5,17 +5,15 @@ sequence of comma-separated numbers.
 
 #To get a number from console input.
 numbers = input("Write numbers=")
-lis = []
 
 def odd_num(numbers):
 	"""
 	Function to find and append odd number in a list.
 	param:numbers
 	"""
-	for i in numbers:
-		if i % 2 != 0:
-			lis.append(i)
-
-# Calling even_num function.
-odd_num(numbers)
-print(str(lis)[1:-1])
+	lis = [i*i for i in numbers if i%2!=0]
+	return lis
+		
+# Calling odd_num function.
+odd_lis = odd_num(numbers)
+print(str(odd_lis)[1:-1])
